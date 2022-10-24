@@ -3,18 +3,10 @@ import React from "react";
 import "../index.css";
 import * as serviceWorker from "../serviceWorker";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import {
-  Navigation,
-  Footer,
-  Home,
-  About,
-  Contact,
-  Blog,
-  Posts,
-  Post,
-} from "../components";
+import { Navigation, Footer, Home, About, Contact, Blog, Posts, Post } from ".";
+import TodoReducer from "./practice/TodoListWithReducer";
 
-function Web() {
+function WebRouter() {
   return (
     <Router>
       <Navigation />
@@ -26,6 +18,7 @@ function Web() {
           <Route path="" element={<Posts />} />
           <Route path=":postSlug" element={<Post />} />
         </Route>
+        <Route path="/todoWithReducer" element={<TodoReducer />}></Route>
       </Routes>
       <Footer />
     </Router>
@@ -34,4 +27,4 @@ function Web() {
 
 serviceWorker.unregister();
 
-export default Web;
+export default WebRouter;

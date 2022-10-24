@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import Web from "./components/Web";
+import WebRouter from "./components/WebRouter";
 
 class App extends Component {
   render() {
-    return <Web />;
+    return <WebRouter />;
   }
 }
 
