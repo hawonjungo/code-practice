@@ -12,8 +12,6 @@ function Todo() {
   // or can use without state.todoInput
   const { todos, todoInput } = state;
 
-  console.log("todoInput: ", todoInput);
-
   const handleAdd = () => {
     isEdit
       ? dispatch(actions.editTodo(indexEdit))
