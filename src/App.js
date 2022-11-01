@@ -1,11 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
+import { Todo } from "./store";
 
-import WebRouter from "./components/WebRouter";
-
-class App extends Component {
-  render() {
-    return <WebRouter />;
-  }
-}
+const App = () => {
+  return <Todo />;
+};
 
 export default App;
