@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 function Todo() {
   const todoFocus = useRef(null);
   const [isEdit, setIsEdit] = useState(false);
+  const [indexEdit, setIndexEdit] = useState(0);
 
   const [state, dispatch] = useStore();
 
@@ -15,8 +16,10 @@ function Todo() {
 
   const handleAdd = (index) => {
     console.log("isEdit", isEdit);
+    console.log("actions: ", actions);
+    console.log("action edit i", actions.editTodo(index));
     isEdit
-      ? dispatch(actions.editTodo(index))
+      ? dispatch(actions.editTodo(indexEdit))
       : // every time todoInput change the todos will update
         dispatch(actions.addTodo(todoInput));
 
@@ -24,11 +27,13 @@ function Todo() {
     dispatch(actions.setTodoInput(""));
     // focus on the input
     todoFocus.current.focus();
+    setIsEdit(false);
   };
   const handleEdit = (index) => {
     dispatch(actions.setTodoInput(todos[index]));
     setIsEdit(true);
-    dispatch(actions.editTodo(index));
+    setIndexEdit(index);
+    todoFocus.current.focus();
   };
 
   console.log(todos);
@@ -71,4 +76,4 @@ export default Todo;
 
 // clear input - empty after click add - done
 // focus back on input- done
-// edit and remove todos. 1/2
+// edit and remove todos. - done.
