@@ -14,7 +14,7 @@ function Todo() {
 
   console.log("todoInput: ", todoInput);
 
-  const handleAdd = (index) => {
+  const handleAdd = () => {
     isEdit
       ? dispatch(actions.editTodo(indexEdit))
       : // every time todoInput change the todos will update
