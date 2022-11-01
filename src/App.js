@@ -1,8 +1,8 @@
 import React from "react";
-import { Todo } from "./store";
+import WebRouter from "./components/WebRouter";
 
 const App = () => {
-  return <Todo />;
+  return <WebRouter />;
 };
 
 export default App;

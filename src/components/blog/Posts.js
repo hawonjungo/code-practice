@@ -36,6 +36,19 @@ function Posts() {
             </p>
           </NavLink>
         </Link>
+        <Link to="/blog/todo-with-reducer-folder-structure">
+          <NavLink className="nav-link" to="/todoWithReducerStructure">
+            <h1 class="font-weight-light">
+              ToDo with Reducer folder structure
+            </h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </NavLink>
+        </Link>
       </div>
     </div>
   );
