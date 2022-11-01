@@ -26,11 +26,6 @@ function reducer(state, action) {
       };
     case EDIT_TODO:
       const todoEdited = [...state.todos];
-      console.log(" action", action);
-      console.log(" action payload", action.payload);
-      console.log(" state todoEdited", todoEdited);
-      console.log(" state todos", todoEdited[action.payload]); // undefine?
-      console.log(" state Input", state.todoInput);
       todoEdited[action.payload] = state.todoInput;
       return {
         ...state,
