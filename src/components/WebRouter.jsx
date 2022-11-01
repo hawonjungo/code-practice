@@ -5,6 +5,7 @@ import * as serviceWorker from "../serviceWorker";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigation, Footer, Home, About, Contact, Blog, Posts, Post } from ".";
 import TodoReducer from "./practice/TodoListWithReducer";
+import { Todo } from "../store";
 
 function WebRouter() {
   return (
@@ -19,6 +20,7 @@ function WebRouter() {
           <Route path=":postSlug" element={<Post />} />
         </Route>
         <Route path="/todoWithReducer" element={<TodoReducer />}></Route>
+        <Route path="/todoWithReducerStructure" element={<Todo />}></Route>
       </Routes>
       <Footer />
     </Router>
