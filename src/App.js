@@ -1,15 +1,16 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
+
 // import WebRouter from "./components/WebRouter";
-import Button from "./components/knowCSS/Button";
+import WebRouter from "./components/knowRouter/WebRouter";
 
 const App = () => {
-  // component Button will have a prop as primary.
   return (
+    //BrowserRouter working as Routing mechanism for whole website ( if wrap them all)
     <div>
-      {" "}
-      <Button />
-      <Button primary />
-      <Button secondary />
+      <BrowserRouter>
+        <WebRouter />
+      </BrowserRouter>
     </div>
   );
 };
